@@ -1,0 +1,9 @@
+.task-checkbox-container{
+  margin: 0.4rem 1rem 0 0;
+
+  &__input {
+    width: 1.8rem;
+    height: 1.8rem;
+    clip-path: inset(0 0 0 0 round 10px);
+  }
+}
