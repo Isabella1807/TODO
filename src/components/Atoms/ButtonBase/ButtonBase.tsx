@@ -1,5 +1,10 @@
 import './ButtonBaseStyle.scss'
-const ButtonBase = ({buttonText}) => {
+
+type TypeButtonProp = {
+	buttonText: string;
+};
+
+const ButtonBase = ({buttonText}: TypeButtonProp) => {
 
 
 	return (
