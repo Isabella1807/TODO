@@ -14,17 +14,23 @@ function App() {
     }
 
     const handleAddNewTask = (data) => {
-        console.log(data)
-        const a = [...taskList]
-        a.push(data)
-        setTaskList(a)
-        localStorage.setItem('tasks', JSON.stringify(a))
+        const newTaskList = [...taskList]
+        newTaskList.push(data)
+        setTaskList(newTaskList)
+        localStorage.setItem('tasks', JSON.stringify(newTaskList))
+    }
+
+    const handleCheckChange = (taskIndexToggled) => {
+        const updatedTasks = [...taskList];
+        updatedTasks[taskIndexToggled].checked = !updatedTasks[taskIndexToggled].checked;
+        setTaskList(updatedTasks);
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks));
     }
 
     return (
         <div className='to-do-container'>
             <AddNewTask handleAddEvent={handleAddNewTask}/>
-            <TasksList taskList={taskList} handleDeleteTask={handleDeleteTask}/>
+            <TasksList taskList={taskList} handleDeleteTask={handleDeleteTask} handleCheckChange={handleCheckChange}/>
         </div>
     )
 }
