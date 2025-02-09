@@ -1,9 +1,15 @@
-import {useState} from "react";
-import LabelBase from "../../Atoms/LabelBase/LabelBase";
-import TaskItem from "../../Molecules/TaskItem/TaskItem";
+import LabelBase from '../../Atoms/LabelBase/LabelBase';
+import TaskItem from '../../Molecules/TaskItem/TaskItem';
 import './TasksListStyle.scss';
+import {Task} from '../../../types/types';
 
-const TasksList = ({taskList, handleDeleteTask, handleCheckChange}) => {
+interface TasksListProps {
+    taskList: Task[],
+    handleDeleteTask: (index: number) => void,
+    handleCheckChange: (index: number) => void,
+}
+
+const TasksList = ({taskList, handleDeleteTask, handleCheckChange}: TasksListProps) => {
 
     return (
         <div className='tasks-list'>

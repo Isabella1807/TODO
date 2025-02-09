@@ -1,10 +1,13 @@
 import './TaskDescriptionStyle.scss'
-import {TypeTaskDescriptionsProps} from "../../../types/types";
 
-const TaskDescription = ({description}: {description: TypeTaskDescriptionsProps['description']}) => {
+interface TypeTaskDescriptionsProps {
+    description: string,
+    isChecked: boolean,
+}
+const TaskDescription = ({description, isChecked}: TypeTaskDescriptionsProps) => {
 
     return(
-        <p className='task-description'>{description}</p>
+        <p className={`task-description ${isChecked ? 'checked' : ''}`}>{description}</p>
     )
 }
 

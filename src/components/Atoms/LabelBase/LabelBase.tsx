@@ -1,10 +1,13 @@
-import {TypeInputFormProps} from '../../../types/types';
+import './LabelBaseStyle.scss'
 
+interface TypeInputFormProps {
+	label: string,
+}
 
-const LabelBase = ({label}: {label: TypeInputFormProps['label']}) => {
+const LabelBase = ({label}: TypeInputFormProps) => {
 
 	return(
-		<p>
+		<p className='label-tag'>
 			{label}
 		</p>
 	)

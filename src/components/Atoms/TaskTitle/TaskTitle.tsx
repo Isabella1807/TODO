@@ -1,9 +1,13 @@
 import './TaskTitleStyle.scss'
-import {TypeTaskDescriptionsProps} from "../../../types/types";
 
-const TaskTitle = ({title}: {title: TypeTaskDescriptionsProps['title']}) => {
+interface TypeTaskDescriptionsProps {
+    title: string,
+    isChecked: boolean
+}
+
+const TaskTitle = ({title, isChecked}: TypeTaskDescriptionsProps) => {
     return (
-        <h1 className='task-title'>{title}</h1>
+        <h1 className={`task-title ${isChecked ? 'checked' : ''}`}>{title}</h1>
     )
 }
 

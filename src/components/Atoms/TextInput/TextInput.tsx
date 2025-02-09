@@ -1,11 +1,9 @@
 import './TextInputStyle.scss'
-import {TypeInputFormProps} from "../../../types/types";
-import {ChangeEvent} from "react";
+import {Dispatch, SetStateAction} from 'react';
 
 interface props {
 	placeholder: string,
-	// : (text: ChangeEvent<HTMLInputElement>) => void,
-	setValue: Function
+	setValue: Dispatch<SetStateAction<string>>
 }
 
 const TextInput = ({placeholder, setValue}: props) => {

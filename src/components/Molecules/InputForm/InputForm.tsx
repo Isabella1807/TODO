@@ -1,12 +1,18 @@
 import LabelBase from '../../Atoms/LabelBase/LabelBase';
 import TextInput from '../../Atoms/TextInput/TextInput';
 import './InputformStyle.scss';
-import {TypeInputFormProps} from '../../../types/types';
+import {Dispatch, SetStateAction} from 'react';
 
-const InputForm = ({label, placeholder, setValue}: any) => {
+interface props {
+	label: string,
+	placeholder: string,
+	setValue: Dispatch<SetStateAction<string>>,
+}
+
+const InputForm = ({label, placeholder, setValue}: props) => {
 
 	return(
-		<div>
+		<div className='input-form-container'>
 			<LabelBase label={label}/>
 			<TextInput placeholder={placeholder} setValue={setValue}/>
 		</div>

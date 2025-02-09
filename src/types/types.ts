@@ -1,12 +1,6 @@
-import {ChangeEvent} from "react";
-
-export type TypeInputFormProps = {
-    label: string,
-    placeholder: string
-    onChange?: (value: ChangeEvent<HTMLInputElement>) => void,
-}
-
-export type TypeTaskDescriptionsProps = {
+export interface Task {
+    title: string,
     description: string,
-    title: string
+    id: string,
+    checked: boolean,
 }
