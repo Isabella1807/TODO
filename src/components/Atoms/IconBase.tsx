@@ -1,8 +1,8 @@
 
-const IconBase = () => {
+const IconBase = ({onClick}) => {
 
     return(
-        <div>
+        <div onClick={onClick}>
             <img src="/trashcan.svg" alt="Delete task"/>
         </div>
     )
