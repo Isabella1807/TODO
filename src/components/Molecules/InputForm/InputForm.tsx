@@ -3,12 +3,12 @@ import TextInput from '../../Atoms/TextInput/TextInput';
 import './InputformStyle.scss';
 import {TypeInputFormProps} from '../../../types/types';
 
-const InputForm = ({label, placeholder}: TypeInputFormProps) => {
+const InputForm = ({label, placeholder, setValue}: any) => {
 
 	return(
 		<div>
 			<LabelBase label={label}/>
-			<TextInput placeholder={placeholder}/>
+			<TextInput placeholder={placeholder} setValue={setValue}/>
 		</div>
 	)
 }

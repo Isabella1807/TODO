@@ -9,7 +9,7 @@ const TasksList = ({taskList, handleDeleteTask}) => {
         <div className='tasks-list'>
             <LabelBase label='Your tasks'/>
             {taskList.map((task, index) => (
-                <TaskItem key={index} title={task.title} description={task.description} onDelete={() => handleDeleteTask(index)}/>
+                <TaskItem key={task.id} title={task.title} description={task.description} onDelete={() => handleDeleteTask(index)}/>
             ))}
         </div>
     )
