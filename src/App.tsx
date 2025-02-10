@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './index.css'
+import './index.scss'
 import AddNewTask from './components/Organisms/AddNewTask/AddNewTask';
 import TasksList from './components/Organisms/TasksList/TasksList';
 import {Task} from './types/types';
