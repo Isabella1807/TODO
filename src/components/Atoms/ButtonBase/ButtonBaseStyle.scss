@@ -1,0 +1,15 @@
+.button-base{
+  border-radius: 10px;
+  height: 45px;
+  padding: 0 20px;
+
+  &:hover{
+    cursor: pointer;
+  }
+
+  &__text{
+    color: black;
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+}
